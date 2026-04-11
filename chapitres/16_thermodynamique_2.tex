@@ -1,0 +1,159 @@
+\setcounter{chapter}{16}
+\chapter{Thermodynamique  (partie 2)}
+\section{Transfert thermique et Flux}
+\subsection{Les 3 Modes de transferts thermiques}
+
+Il y a 3 manières pour un système pour recevoir du transfert thermique\footnote{on pourrait dire pour recevoir de la chaleur mais ce mot est banni pour cause de confusion avec la température}
+
+
+\begin{itemize}
+\item le transfert thermique \textbf{par rayonnement} : \trou{ transfert d'énergie sous forme d'ondes électromagnétiques, principalement dans l'infrarouge, émis par des objets en raison de leur température.}
+\item le transfert thermique \textbf{par \trou{convection}} : l'énergie thermique se transmet de proche en proche dans un fluide avec \textbf{mouvement d'ensemble} de celui-ci.
+\item le transfert thermique \textbf{par \trou{conduction}} : Il y a contact entre le système et l'extérieur. L'agitation thermique se transmet de proche en proche dans la matière \trou{sans déplacement} d'ensemble de celle-ci.\\
+\begin{center}
+\includegraphics[scale=0.5]{figures/thermo/convection}
+\end{center}
+\end{itemize}
+
+%\newpage
+%\blocgris{Application}{Repérer dans le texte suivant les différents transferts thermiques et essayez de regrouper ces exemples en trois catégories : \\
+%\textit{C'est le printemps, vous vous prélassez au soleil. Il fait chaud.\\
+%Vous rentrez ensuite préparer votre repas. Au menu, spaghettis bolognaise. Vous placez votre casserole d'eau sur la plaque électrique. L'eau se réchauffe et commence à bouillir. Vous y plongez vos pâtes. Vous mettez la sauce bolognaise à réchauffer dans une autre casserole et vous oubliez votre cuillère en inox dedans. Au moment de remuer, impossible de toucher la cuillère, elle est bien trop chaude. Vous allez donc chercher une cuillère en bois.\\
+%Une fois repus, vous vous préparez une boisson chaude. Vous mettez votre tasse au micro-onde. En trente secondes, c'est chaud. Vous entourez votre tasse de vos mains pour les réchauffer puis vous vous asseyez, le dos contre le radiateur chaud. \\
+%Au moment où vous montez vous coucher, vous vous rendez compte qu'il fait bien plus chaud à l'étage qu'au rez de chaussée alors que les radiateurs ne sont allumés qu'en bas.\\
+%Vous vous endormez jusqu'au petit matin où vous débuterez une nouvelle journée rythmée par les transferts thermiques.}
+%}
+%\newpage
+\subsection{Le flux thermique}
+\etiquette{Contexte} On considère une paroi qui sépare deux milieux de températures différentes $T_1$ et $T_2$ telle que $T_1>T_2$. L'écart de température provoque de la \trou{conduction} entre la face chaude et la face froide. On dit qu'un flux\footnote{flux vient du latin fluxus qui signifie écoulement} thermique notée $\Phi$ traverse la paroi. Ce flux est une \trou{puissance} elle s'exprime donc en Watt de symbole \trou{W}.
+
+
+\begin{center}
+\includegraphics[scale=0.5]{figures/thermo/fig1}
+\end{center}
+
+
+\etiquette{Interprétation Physique} $\Phi$ représente l'énergie qui traverse la paroi chaque seconde. $$\boxed{1\:W = 1 \:J/s}$$
+
+\subsection{Résistance thermique}
+\begin{itemize}
+	\item Plus l'écart de température est grand et plus la conduction est \trou{importante}, plus $\Phi$ est \trou{grand}. 
+	\item Le flux dépend du matériau qui constitue la paroi et des dimensions de la paroi. On parle alors de la \trou{résistance thermique de la paroi}, elle se note $R_{th}$. 
+\end{itemize}
+
+\blocrouge{Formules}{$$\Phi=\frac{T_1 - T_2}{\trou{R_{th}}}$$ Unités: $\Phi$ en W (ou J/s) ; $T_1$, $T_2$ en K ; $R_{th}$ en K/W $$R_{th}=\frac{\trou{ e }}{\lambda . S}$$ Unités: e: en m ; $S$ en $m^2$ et $\lambda$: conductivité thermique de la paroi en $\SI{}{\watt\per\kelvin\per\meter}$
+}
+
+\etiquette{Conséquences}
+\begin{itemize}
+	\item Le flux est d'autant plus grand que la résistance thermique $\rm R_{th}$ est \trou{petite}.
+	\item Ce flux est d'autant plus grand que la différence de température $\rm T_1-T_2$ est \trou{grande}
+	\item Plus l'épaisseur de la paroi est grande, plus sa résistance thermique est \trou{grande} et plus elle est isolante/conductrice.
+	\item Plus la surface de la paroi est grande, plus sa résistance thermique est \trou{petite.}
+\end{itemize}
+
+
+
+\blocgris{Exercice}{On considère un mur en béton de surface 10 $m^2$ et d'épaisseur 15 cm. Ce mur sépare l'intérieur d'une habitation dont la température est \SI{20}{\celsius} et l'extérieur dont la température est $5^\circ$C. La conductivité thermique du béton est $\SI{0,013}{\watt\per\kelvin\per\meter}$. 
+\begin{enumerate}
+	\item Calculer la résistance thermique du mur.
+	\item En déduire le flux thermique traversant le mur.
+\end{enumerate}
+\vspace{7  cm}
+}
+
+\etiquette{Exercices type BAC}
+\begin{itemize}
+	\item Résistance thermique: \url{https://labolycee.org/isolation-thermique-du-rover-perseverance}
+	\item Application du premier principe: \url{https://labolycee.org/linteret-energetique-dune-pac}
+	\item Autre sujet de bac: \url{https://labolycee.org/le-sauna}
+\end{itemize}
+
+\section{Température terrestre moyenne}
+\subsection{Corps Noir}
+Le rayonnement thermique du Soleil est très bien décrit par le modèle du corps noir. 
+Ce modèle décrit la production de rayonnement thermique sous l'effet de la température. La puissance rayonnée par \SI{1}{\meter \squared} de corps noir vaut $$P=\trou{\sigma\ T^4}$$ $\sigma$ est la constante de Stefan et vaut \SI{5,67e-8}{W.m^{-2}.K^{-4}}
+\subsection{Hypothèses}
+
+\begin{itemize}
+	\item La Terre est à l'équilibre thermique et se comporte comme un corps noir.
+	\item Le système Terre-Atmosphère reçoit une puissance solaire par unité de surface $P_S= \SI{340}{W.m^{-2}}$
+	\item Une fraction $A$ de cette puissance est réfléchie. Cette fraction se nomme \textbf{l'albedo terrestre}. $$A=0,34$$
+	\item La puissance surfacique effectivement reçue par la Terre vaut donc $$P_{recue}= (1-A)\times P_S$$
+	\item La Terre se comporte comme un corps noir de température $T$.
+	\item L'atmosphère absorbe une fraction $a=0,45$ du rayonnement émis par la Terre. Ainsi l'ensemble Terre-Atmosphère émet vers l'espace  une puissance surfacique de $$P_{emise}= (1-a)\sigma T^4$$ 
+\end{itemize}
+\subsection{Calcul de T}
+En régime stationnaire, $$P_{recue}=P_{emise}$$
+$$T=\left( \frac{(1-A)\ P_{S}}{(1-a)\ \sigma}\right)^{1/4}=\SI{291}{K}=\SI{18}{\celsius}$$
+
+\etiquette{Exercice} \url{https://www.labolycee.org/temperature-moyenne-de-surface-de-la-terre}
+\section{Loi phénoménologique de Newton : transfert conducto-convectif}
+\subsection{Situation}
+
+On considère un objet de température T et de surface extérieure S. Ce système est immergé dans un fluide de température fixe $Te\neq T$.
+Les températures étant différentes, on observe un transfert thermique entre le système est l'extérieur. 
+
+\begin{center}
+	\includegraphics[scale=0.35]{figures/thermo/convection1.png}
+\end{center}
+
+\etiquette{Exemple} Plat chaud qui sort du four et qui refroidi dans l'air de la cuisine. 
+
+\etiquette{Vocabulaire} 
+
+Proche de la surface du système, le fluide touche le système. Il y a alors \textbf{conduction} mais aussi \textbf{convection} car le fluide est en mouvement. On parle de transfert \textbf{convectif} entre le fluide et la surface du système.
+
+\blocrouge{Formule de Newton}{Le flux convectif $\Phi$ échangé entre un système à la température T et un fluide à la température Te vaut: $$\boxed{\Phi = h\times(T_e - T)\times S}$$ Unités: h est le coefficient convectif en $\SI{}{\watt\per\meter\squared\per\kelvin\squared}$ ; S: la surface du système en $m^2$ ; T et Te en K (ou\SI{}{\celsius}) et $\Phi$ en W  } 
+
+
+\etiquetterouge{Réfléchir au signe !}
+$\Phi$ peut être positif ou négatif. Si la surface est plus chaude que l'extérieur $T_e < T$ , le flux $\Phi$ est \trou{ négatif}. Cela correspond  à une \trou{perte d'énergie} pour la surface.
+On retrouve la convention de la thermodynamique et celle du banquier.
+\subsection{Bilan d'énergie du système}
+\etiquette{Situation}
+Le système est incompressible, au repos à la température T. Il échange de l'énergie uniquement par transfert conducto-convectif avec le milieu extérieur de température Te. Condition iniatiale: on sait que à t=0 $T(0)=T_0$.\\ 
+
+\begin{center}
+	\includegraphics[scale=0.4]{figures/thermo/convection2.pdf}
+\end{center}
+
+D'après le premier principe de la thermodynamique, on a :
+\trou{$\Delta U = Q$}\\
+Or, $$Q=\trou{\Phi \Delta t}$$ et $$\Delta U = \trou{C.\Delta T}$$
+
+
+\blocgris{A Savoir Faire}{\textbf{Etablir l'équation différentielle}. T(t) est la fonction recherchée. 
+\begin{align*}
+	C.\Delta T &= \Phi . \Delta t & \text{Bilan\: d'énergie}\\
+		C.\Delta T &=  h.(T_e-T).S .\Delta t& \text{Loi de Newton}\\
+	C. \frac{\Delta T}{\Delta t} &= \Phi = h.(T_e-T).S & \text{Division par }\Delta t\\
+	\text{En faisant tendre \trou{$\Delta t$ vers 0}}\\
+	C.\frac{dT}{dt} &= 	h.(T_e-T).S\\
+	\\
+	\frac{dT}{dt} &= 	\frac{h.S}{C}(T-Te)\\
+	\\
+	\boxed{\dfrac{dT}{dt}=\dfrac{hS}{C}T - \dfrac{hS}{C}Te} & &\text{Mise sous la forme }y'=ay+b
+\end{align*}
+}
+
+On obtient une équation différentielle d'ordre 1 avec second membre constant.\\
+
+\etiquette{Solution de l'équation différentielle}
+
+\begin{center}
+\trou{$$\boxed{T(t)=Te+(T_0-Te)e^{-t/\tau}}$$}
+\trou{Avec $\tau=\dfrac{C}{hS}$ le temps caractéristique de refroidissement, exprimé en seconde}
+\end{center}
+
+Vérifier que cette expression est bien solution de l'équation différentielle et que $\tau$ est bien homogène à un temps.
+
+\etiquette{Exercices type bac} 
+\begin{itemize}
+	\item Asie 2024 Jour 1  \url{https://www.labolycee.org/etude-dune-bouteille-isotherme}
+	\item \url{https://www.labolycee.org/preparer-un}
+\item \url{https://www.labolycee.org/capacite-thermique-massique-du-cuivre}
+\item \url{https://www.labolycee.org/evolution-de-la-temperature-dans-une-bouteille-isotherme}
+
+\end{itemize}
+

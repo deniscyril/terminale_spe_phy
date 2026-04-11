@@ -1,0 +1,25 @@
+# LaTeX fichiers auxiliaires
+*.aux
+*.log
+*.synctex.gz
+*.out
+*.fls
+*.fdb_latexmk
+*.toc
+*.lof
+*.lot
+
+# PDFs ignorés partout sauf dans builds/
+*.pdf
+!builds/*.pdf
+
+# macOS
+.DS_Store
+
+# Dossiers générés / temporaires
+chapitres_md/
+.texpadtmp/
+Archive.zip
+
+# Obsidian (config locale)
+.obsidian/

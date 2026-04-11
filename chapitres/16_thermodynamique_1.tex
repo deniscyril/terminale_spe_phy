@@ -1,0 +1,186 @@
+\setcounter{chapter}{16}
+\chapter{Thermodynamique (partie 1)}
+\section{Le modèle du gaz parfait}
+\subsection{Description}
+
+Le modèle du gaz parfait est un ensemble d'hypothèses qui forme une description microscopique d'un gaz. Ces hypothèses sont liées à des propriétés microscopiques et à des grandeurs macroscopiques mesurables: P, V et T.
+
+\begin{table}[hbt]
+  \begin{tabular}{|p{10cm}|p{7cm}|}
+  \hline
+A l'échelle microscopique    & A l'échelle macroscopique \\
+    \hline \hline
+Les particules (atomes ou molécules) de gaz sont en mouvement \trou{désordonnées}. Ces particules sont considérées comme des points matériels (masse mais taille nulle). Il n'y a \trou{aucune interaction} entre les particules     & La température T en K du gaz est reliée aux \trou{vitesses moyennes} des particules qu'il contient \\
+\hline
+Nombreux chocs entre les particules et la paroi du récipient    & L'ensemble de \trou{ces chocs} engendre une pression P sur la paroi.  \\
+\hline
+Les particules sont \trou{très espacées} les unes des autres & La masse volumique $\rho=\frac{m}{V}$ est très faible environ 1 kg par mètre cube \\
+\hline
+  \end{tabular}
+
+\end{table}
+
+\blocrouge{Equation d'un gaz parfait}{
+
+Les grandeurs qui caractérisent l'état d'un gaz parfait vérifient l'équation:
+$$P\times V = \trou{n\times R\times T}$$
+P: pression en Pa ; V: volume du gaz en $m^3$ ; $n$ quantité de matière de gaz en mol ; T température en K \\
+R est la constante des gaz parfaits et vaut 8,31 J/K\\
+T (en K) = 273 + température en \SI{}{ \celsius}
+
+}
+
+
+\subsection{Limites du modèle}
+
+Le modèle du gaz parfait est bien vérifié si :
+\begin{itemize}
+	\item La pression du gaz n'est pas trop grande
+	\item les interactions entre particules sont négligeables
+	\item la taille des particules est négligeables
+\end{itemize}
+
+\section{Premier Principe de la Thermodynamique}
+\etiquetterouge{A retenir} Les énergies se présentent sous différentes formes ou manière de s'échanger mais toutes se comptent en \trou{joule  } de symbole J. C'est l'unité légale de mesure de l'énergie.
+
+\subsection{Énergie interne d'un système }
+Tout système macroscopique est composé d'un grand nombre d'entités\footnote{entité microscopique = atome, ion ou molécules} microscopiques en mouvement et en interaction entre elles. Chacune possède une \textbf{\trou{énergie cinétique microscopique}}, liée à l'agitation thermique et une \textbf{énergie \trou{potentielle } microscopique} liée à ses interactions avec les autres.\\
+\blocrouge{Définition}{
+L'énergie interne U d'un système macroscopique est égale à la somme des énergies \trou{ microscopiques } (cinétique et potentielle) de toutes les entités microscopiques qui constituent le système. Elle s'exprime en \trou{joule} de symbole \trou{J}.
+}
+
+En pratique, on ne s'intéresse pas à la valeur de l'énergie interne, on s'intéresse à sa variation: $\Delta U = U_f - U_i$ cf premier principe.
+
+\etiquetterouge{Important}L'énergie interne U augmente quand \trou{la température du système augmente.}
+
+\subsection{Énergie totale}
+
+L'énergie totale d'un système est:\\
+\trou{la somme des énergies potentielle de pesanteur, cinétique (macroscopique) et de l'énergie interne.\\
+On note $E_{tot}=E_{pp}+E_c+U$}
+
+\subsection{Travail échangé: W}
+Le système peut échanger de l'énergie sous forme de travail noté W. Cette situation s'observe lorsque le système subit au moins une force qui travaille. 
+
+\etiquette{Exemples:}
+\begin{itemize}
+	\item Système: gaz contenu dans un piston. On pousse le piston de manière à comprimer le gaz. Les forces de pression travaillent.
+	\item Vous frotter vigoureusement vos mains entre elles, les forces de frottements travaillent et cette énergie reçue augmente l'énergie interne de vos mains et ainsi leurs températures.
+	\item On considère un récipient rempli d'eau dans lequel est plongé une hélice reliée à un moteur.\\
+On mesure la température de l'eau après avoir fait tourner l'hélice. On constate une augmentation de la température. On en déduit que l'énergie interne de l'eau a  \trou{augmenté} suite à un transfert d'énergie par travail.(L'hélice se déplace). Voir expérience de Joules pour plus d'informations.
+
+\end{itemize}
+
+\subsection{Transfert thermique: Q}
+
+Ce transfert se fait sans aucun mouvement de la part du système. Il est en général dû à une différence de température entre le système et le milieu extérieur.Le transfert thermique se fait d'un corps chaud vers un corps froid. 
+\begin{center}
+	\includegraphics[scale=0.5]{figures/thermo/fig_sens}	
+\end{center}
+
+
+\blocrouge{Convention}{
+Le travail W et le transfert thermique Q sont comptés 
+\begin{itemize}
+	\item positivement si l'énergie est reçue par le système
+	\item négativement si l'énergie est cédée par le système au milieu extérieur
+\end{itemize}
+
+}
+
+\blocgris{Application}{ Un bloc d'acier à 50$^{\circ}$C est plongé dans 25 cL d'eau à 15$^{\circ}$C. Le système étudié est le bloc d'acier.
+\begin{enumerate}
+	\item Faire un schéma. Représenter par une flèche le transfert thermique: Q entre le bloc d'acier et l'eau.
+	\item Dans cette situation, quel est le milieu extérieur ?
+	\item En admettant le bloc d'acier cède 10 J par transfert thermique à l'eau. Que vaut le transfert thermique Q échangé avec le milieu extérieur ?
+	\item En considérant l'eau comme système, quel est le transfert thermique Q' échangé avec l'extérieur dans la même situation. 
+\end{enumerate}
+}
+
+
+
+\subsection{Enoncé du premier principe}
+
+\blocrouge{Premier principe de la thermodynamique\footnote{Par définition un principe ne se démontre pas contrairement à un théorème. On admet donc que ce principe est vrai et on en tire des propriétés, des conséquences, des applications...}}{
+La variation d'énergie interne pour un système immobile à l'échelle macroscopique est égale à la somme des énergies échangées par le système avec l'extérieur, sous forme de travail W et de transfert thermique Q.\\
+On a donc :$$ \trou{\Delta U=W+Q}$$
+}
+\etiquette{Méthode Générale} Le premier principe permet de faire un bilan d'énergie. Dans un exercice on fera attention à bien:
+\begin{itemize}
+	\item Définir le système étudié et son milieu extérieur avec lequel il échange de l'énergie.
+	\item Identifier et catégoriser tous les transferts d'énergie. Est-ce un travail W ou un transfert thermique Q ?
+	\item Le travail est-il reçu (W>0) ou fourni (W<0) ? idem pour Q
+	\item Calculer la sommes des transferts : W + Q 
+	\item Confronter la somme des transferts à la variation d'énergie interne $\Delta U$
+\end{itemize}
+
+
+\subsection{Cas important d'un système incompressible}
+
+Les liquides et les solides sont des systèmes que l'on peut considérer incompressibles. Dans ce cas, le travail $W$ des forces de pression est \trou{nul }.  Ces systèmes n'échangent que du transfert \trou{thermique Q } avec l'extérieur.
+
+\etiquette{Exemples}
+Observez les 4 transferts thermiques suivants.
+Identifier les grandeurs qui influe sur la variation de température d'un système qui reçoit un transfert thermique Q.
+\begin{center}
+	\includegraphics[scale=.9]{figures/thermo/capacite_thermique}
+\end{center}
+
+
+
+\blocrouge{Relation Q et $\Delta T$}{
+Lorsqu'un système (incompressible)   échange avec l'extérieur un transfert thermique Q sa température varie de $\Delta T$  selon $$Q = C\times \Delta T= C\times(T_f-T_i)$$
+C est appelée la capacité thermique du système
+
+
+Unités: Q en J ; C en J/K ; $\Delta T$ en K
+}
+
+\etiquette{Remarque} Lors de cette transformation, l'énergie énergie interne varie. D'après le premier principe on a $\Delta U = Q$ car $W=0$ (incompressible).
+
+
+\etiquetterouge{Sens Physique !} Il faut penser la capacité thermique du système comme l'énergie qu'il doit recevoir pour augmenter sa température de $1^{\circ}$C.
+
+\etiquette{Culture}
+
+La capacité thermique d'un litre d'eau est 4180 J/K. Cela signifie qu'en transférant une énergie Q= 4180 J à un litre d'eau, on augmente de \SI{1}{\celsius} sa température (peu importe sa température initiale dans qu'il n'y a pas changement d'état).
+
+\etiquette{Capacité thermique massique} 
+
+Dans les exercices, on trouvera souvent la capacité thermique massique $c$ et non la capacité thermique du système de masse $m$. Naturellement pour un matériau donné, plus le système est gros (plus sa masse est importante) plus il faut d'énergie pour augmenter sa température de $1^{\circ}$C. 
+$$C = m\times c$$
+C capacité thermique du système en J/K ; m: masse du système en kg et $c$: capacité thermique massique en J/kg/K
+
+\blocrouge{Astuce}{Regardez les unités, si $c$ est par unité de masse, multipliez le par la masse du système}
+
+\blocgris{Application}{On place 500 mL d'eau froide à $15^{\circ}$C dans un casserole. Pour préparer du thé, on chauffe cette eau jusqu'à $85^{\circ}$C. Pour cela, on utilise une plaque chauffante de 800 W.\\ Données: capacités thermiques massiques: $c_{eau}=4,18\:kJ.kg^{-1}.K^{-1}$ ; $c_{fer}=444\:J.kg^{-1}.K^{-1}$
+\begin{enumerate}
+	\item Calculer le transfert thermique Q reçu par l'eau pendant le chauffage.
+	\item En admettant que toute l'énergie de la plaque chauffante est transférée à l'eau, combien de temps faut-il au système pour atteindre $85^{\circ}$C ?
+	\item On recommence la même expérience (même durée de chauffage que la question précédente) en remplaçant les 500 mL d'eau par 500 g de fer. Quelle est la température atteinte par le bloc de fer ?
+	\item Conclure
+\end{enumerate}
+
+}
+\newpage
+
+\blocgris{Synthèse}{A l'aide des questions suivantes réalise une synthèse 
+\begin{enumerate}
+	\item Quelles sont les grandeurs macroscopiques qui permettent de décrire un gaz ?
+	\item Quelles sont les hypothèses du modèle du gaz parfait ? Quelles sont les limites de ce modèle ?
+	\item Comment s'écrit l'équation d'un gaz parfait. Pourquoi dit-on que c'est une équation d'état ? Précise toutes unités de cette équation.
+	\item Quelles différences entre énergie interne et énergie mécanique ?
+	\item Quels sont les deux manières pour un système de modifier son énergie internes ?
+	\item Comment évolue la température lorsque l'énergie interne augmente ?
+	\item Dans le cas d'un système incompressible qui reçoit Q quel relation y a-t-il entre Q et $\Delta$ U ?
+	\item Explique simplement ce qu'est la capacité thermique d'un système ?
+	\item Donne la relation en la capacité thermique massique $c$, la masse, $\Delta T$ et Q pour un système incompressible.
+\end{enumerate}
+}
+
+\etiquetterouge{Exercices à faire}
+\begin{itemize}
+	\item 18 ; 22 p 314
+	\item 27 ; 28 p 316
+	\item Questions 1,2,3 et 4 du sujet: \url{https://prod.labolycee.org/bac-2023-centres-etrangers-1-jour-1}
+\end{itemize}
