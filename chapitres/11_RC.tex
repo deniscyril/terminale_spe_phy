@@ -58,8 +58,8 @@ Les deux armatures d'un condensateur portent des charges électrique \trou{oppos
 	\etiquette{Comment la géométrie du condensateur modifie sa capacité ?}
 	
 	\begin{itemize}
-		\item Si on augmente la surface des plaques alors \trou{la capacité du condensateur diminue.}
-		\item Si on augmente la distance entre les plaques alors  \trou{la capacité du condensateur augmente.}
+		\item Si on augmente la surface des plaques alors \trou{la capacité du condensateur augmente.}
+		\item Si on augmente la distance entre les plaques alors  \trou{la capacité du condensateur diminue.}
 	\end{itemize}
 
 	
@@ -131,8 +131,8 @@ Finalement la solution s'écrit: $$y=\trou{\frac{7}{2}e^{2x}-\frac{5}{2}}$$
 On cherche $u_c$ telle que $$\boxed{\dfrac{du_c}{dt}=-\dfrac{1}{RC}u_c}$$ On sait que $u_c(0)=E$ \\E est une valeur connue, c'est la tension initiale du condensateur.
 \\
 Utilisons l'outil mathématique avec: $a=\trou{-1/RC}$, $b=\trou{0}$ \\
-Cette équation a une solution de la forme $u_c(t)=Ke.^{-t/RC}$.\\
-$u_c(0)=E=K$ on en déduit que $A=E$\\
+Cette équation a une solution de la forme $u_c(t)=K e^{-t/RC}$.\\
+$u_c(0)=E=K$ on en déduit que $K=E$\\
 On a donc la solution :
 $$\trou{u_c(t)=E\times e^{-t/RC}}$$
 
@@ -167,7 +167,7 @@ On étudie les variations de la tension $u_c$ au cours du temps.
 \includegraphics[scale=0.5]{figures/rc/circuit_charge}
 }
 
-\etiquetterouge{Objectif} Trouver l'expression mathématique de la tension $u_c(t)$ aux bornes du condensateur pendant sa décharge.\\
+\etiquetterouge{Objectif} Trouver l'expression mathématique de la tension $u_c(t)$ aux bornes du condensateur pendant sa charge.\\
 
 
 \etiquette{Etape 1}
@@ -193,7 +193,7 @@ Comme pour la décharge, il s'agit d'une équation différentielle du premier or
 On cherche $u_c(t)$ telle que $$\boxed{\dfrac{du_c}{dt}=-\dfrac{1}{RC}.u_c+\dfrac{E}{RC}}$$ avec $$u_c(t=0)= 0\:V \quad\text{condition initiale}$$
 
 Utilisons l'outil mathématique avec: $a=\trou{-1/RC}$, $b=\trou{\frac{E}{RC}}$ soit $-\frac{b}{a}=E$ (à vérifier vous même!!)\\
-Cette équation a une solution de la forme $u_c(t)=\trou{Ke.^{-t/RC}+E}$\\
+Cette équation a une solution de la forme $u_c(t)=\trou{K e^{-t/RC}+E}$\\
 Déterminons K, en utilisant $$u_c(0)=0\quad\text{et aussi}\quad u_c(0)=Ke^0+E$$ donc $$K=\trou{-E}\quad\Rightarrow u_c(t)=\trou{-E.e^{-t/RC}} + \trou{E}$$ En factorisant par E: $$\boxed{u_c(t)=E\times \left( 1- e^{-t/RC}\right)}$$
 	 
 \etiquette{Représentation graphique de $u_c(t)$}\\
@@ -204,7 +204,7 @@ Déterminons K, en utilisant $$u_c(0)=0\quad\text{et aussi}\quad u_c(0)=Ke^0+E$$
 
 \paragraph*{Observations} 
 \begin{itemize}
-	\item On constate qu'après une certaine durée, la tension du condensateur n'évolue plus. On dit que le régime \trou{transitoire} est terminé et que le régime \trou{permanent} et atteint.  
+	\item On constate qu'après une certaine durée, la tension du condensateur n'évolue plus. On dit que le régime \trou{transitoire} est terminé et que le régime \trou{permanent} est atteint.  
 	\item Après $5\times \tau$ l'écart entre $u_c(t)$ et son asymptote est de moins de 1 \%.
 \end{itemize}
 

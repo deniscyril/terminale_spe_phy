@@ -37,8 +37,10 @@ for texfile in "$CHAPITRES_DIR"/*.tex; do
   cat > "$mdfile" <<EOF
 ---
 Niveau: Terminale
-Discipline:
-Statut:
+Discipline:           # Physique ou Chimie
+Statut:               # Fait / A modifier / A rédiger
+date_traite:          # YYYY-MM-DD
+tp_lie:               # [[tp_tle_xxx]]
 Source_LaTeX: "${base}.tex"
 tags:
   - Cours
