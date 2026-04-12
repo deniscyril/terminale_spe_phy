@@ -1,3 +1,145 @@
+\setcounter{chapter}{2}
 \chapter{Titrages}
 
-\section{A faire}
+\section{Dosage par titrage direct}
+
+\subsection{Définitions}
+
+\blocrouge{Définitions}{
+Un \trou{dosage} est une technique expérimentale qui permet de déterminer précisément la \trou{concentration} (ou la quantité de matière) d'une espèce chimique dans une solution.
+
+Un \textbf{dosage par titrage direct} est un dosage qui s'appuie sur une \trou{réaction chimique} appelée \textbf{réaction support du titrage}. Cette réaction doit être :
+\begin{itemize}
+    \item \trou{rapide}
+    \item \trou{totale} (quantitative : le réactif limitant est entièrement consommé)
+    \item \trou{univoque} (pas de réaction parasite)
+\end{itemize}
+}
+
+\blocrouge{Vocabulaire}{
+\begin{itemize}
+    \item L'\trou{espèce titrée} est l'espèce dont on veut déterminer la concentration. Elle est contenue dans la \trou{prise d'essai} (volume $V_A$ prélevé avec précision).
+    \item L'\trou{espèce titrante} est l'espèce de concentration \trou{connue avec précision} ($C_B$). Elle est versée progressivement depuis la \trou{burette}.
+\end{itemize}
+}
+
+\subsection{Équivalence}
+
+\blocrouge{Définition et relation à l'équivalence}{
+L'\textbf{équivalence} d'un titrage est l'état du système pour lequel les réactifs ont été introduits en \trou{proportions stœchiométriques}.
+
+Pour une réaction de la forme : $a\,A + b\,B \rightarrow \text{produits}$
+
+À l'équivalence :
+$$\trou{\frac{C_A \cdot V_A}{a} = \frac{C_B \cdot V_{B,\text{éq}}}{b}}$$
+
+$V_{B,\text{éq}}$ est le \textbf{volume équivalent} : volume de solution titrante versé à l'équivalence.
+}
+
+\etiquetterouge{Méthode} Pour exploiter un titrage :
+\begin{enumerate}
+    \item Repérer l'équivalence et lire $V_{B,\text{éq}}$ sur l'axe des abscisses.
+    \item Appliquer la relation : $C_A = \dfrac{a \cdot C_B \cdot V_{B,\text{éq}}}{b \cdot V_A}$
+\end{enumerate}
+
+\etiquette{Application}
+
+\begin{enumerate}
+    \item $V_A = \SI{10.0}{\milli\liter}$ d'une solution d'acide lactique $C_3H_6O_3$ est titrée par une solution de soude $C_B = \SI{1.0e-2}{\mol\per\liter}$. Le volume équivalent est $V_{\text{éq}} = \SI{15.0}{\milli\liter}$.
+    \begin{enumerate}
+        \item Identifier la solution titrante et la solution titrée.
+        \item Écrire la réaction support du titrage.
+        \item Calculer la concentration $C_A$ de la solution d'acide lactique.
+    \end{enumerate}
+    \item $V_B = \SI{10}{\milli\liter}$ d'une solution d'éthanoate de sodium ($\text{Na}^+ + \text{CH}_3\text{COO}^-$) est titrée par une solution d'acide chlorhydrique de concentration $c = \SI{0.024}{\mol\per\liter}$. Le volume équivalent est $V_{\text{éq}} = \SI{8.0}{\milli\liter}$.
+    \begin{enumerate}
+        \item Identifier titrante et titrée.
+        \item Écrire la réaction support.
+        \item Calculer la concentration de l'éthanoate de sodium.
+    \end{enumerate}
+\end{enumerate}
+
+\vspace{5cm}
+
+\section{Titrage pH-métrique}
+
+\subsection{Principe et montage}
+
+Un titrage \trou{pH-métrique} consiste à suivre l'évolution du \trou{pH} de la solution titrée au cours de l'ajout de la solution titrante.
+
+La réaction support est une réaction \trou{acido-basique}.
+
+La \textbf{courbe de titrage} est la courbe : $\text{pH} = f(V_{\text{sol. titrante versée}})$
+
+\etiquette{Protocole} Ajouter la solution titrante :
+\begin{itemize}
+    \item millilitre par millilitre \trou{loin} de l'équivalence ;
+    \item par fractions de \SI{0.5}{\milli\liter} ou moins \trou{au voisinage} de l'équivalence ($V_{\text{éq}} \pm \SI{1}{\milli\liter}$).
+\end{itemize}
+
+\subsection{Repérage de l'équivalence}
+
+L'équivalence est repérée par un \trou{saut de pH} (variation brusque du pH). On peut la déterminer par deux méthodes :
+
+\blocrouge{Méthode des tangentes}{
+On trace deux tangentes à la courbe, \trou{parallèles} entre elles, de part et d'autre du saut de pH. On trace ensuite la droite \trou{médiane} parallèle à ces deux tangentes. \textbf{L'équivalence} est le point d'intersection de cette médiane avec la courbe.
+}
+
+\blocrouge{Méthode de la courbe dérivée}{
+On trace la courbe $\dfrac{\Delta \text{pH}}{\Delta V} = f(V)$. \textbf{L'équivalence} correspond au \trou{maximum} de cette courbe dérivée.
+}
+
+\url{https://youtu.be/z1l8--2KGpQ}
+
+\section{Titrage colorimétrique}
+
+\blocrouge{Principe}{
+Un titrage \trou{colorimétrique} utilise un \textbf{indicateur coloré acido-basique} pour repérer l'équivalence par un \trou{changement de couleur}.
+
+La \textbf{zone de virage} de l'indicateur choisi doit \trou{englober le saut de pH} à l'équivalence.
+}
+
+\begin{center}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Indicateur} & \textbf{Zone de virage (pH)} & \textbf{Couleur} \\
+\hline
+Hélianthine & 3,1 – 4,4 & rouge → jaune \\
+BBT & 6,0 – 7,6 & jaune → bleu \\
+Phénolphtaléine & 8,2 – 10,0 & incolore → rose \\
+\hline
+\end{tabular}
+\end{center}
+
+\etiquette{Remarque} Le titrage colorimétrique est plus rapide que le titrage pH-métrique mais moins précis. On l'utilise pour une mesure rapide ou pour un titrage préliminaire.
+
+\section{Titrage conductimétrique}
+
+\subsection{Principe}
+
+Un titrage \trou{conductimétrique} consiste à suivre l'évolution de la \trou{conductivité} $\sigma$ (ou de la conductance $G$) de la solution titrée au cours de l'ajout de la solution titrante.
+
+La \textbf{courbe de titrage} est : $\sigma = f(V_{\text{sol. titrante versée}})$
+
+\blocrouge{Remarques importantes}{
+\begin{itemize}
+    \item \trou{Toutes} les espèces ioniques en solution contribuent à la conductivité (y compris les ions spectateurs).
+    \item Pour que la courbe soit linéaire par morceaux, le volume versé doit être \trou{petit} devant le volume initial de solution titrée.
+    \item Il n'est pas nécessaire de resserrer les versements au voisinage de l'équivalence.
+\end{itemize}
+}
+
+\subsection{Repérage de l'équivalence}
+
+\blocrouge{Méthode}{
+On trace les deux meilleures \trou{droites} approchant chaque partie du nuage de points (modélisation linéaire). \textbf{L'équivalence} est le point d'intersection de ces deux droites, correspondant au \trou{changement de pente} de la courbe. On lit l'abscisse $V_{B,\text{éq}}$.
+}
+
+\url{https://youtu.be/Z3-eOJG3im0}
+
+\etiquetterouge{Exercices}
+
+Dans le livre : Ex 6, 11, 13 p.~62\\
+Pour aller plus loin : Ex 22 p.~67 ; Ex 25 p.~69\\
+\textbf{Sujets bac} : Asie 2021 J2 Ex1 partie 2 ; Amérique du Nord 2021 J1 Ex B ; Antilles-Guyane 2015 Ex 2 (2\ieme{} partie)\\
+Vidéo bilan : \url{https://youtu.be/MSEryl_85Oo}

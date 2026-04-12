@@ -32,15 +32,16 @@ for texfile in "$CHAPITRES_DIR"/*.tex; do
     echo "📄 Copié : $pdf_trous"
   fi
 
-  # Générer la note Obsidian
+  # Générer la note Obsidian uniquement si elle n'existe pas encore
   mdfile="$VAULT_DIR/$base.md"
-  cat > "$mdfile" <<EOF
+  if [ ! -f "$mdfile" ]; then
+    cat > "$mdfile" <<EOF
 ---
 Niveau: Terminale
-Discipline:           # Physique ou Chimie
-Statut:               # Fait / A modifier / A rédiger
-date_traite:          # YYYY-MM-DD
-tp_lie:               # [[tp_tle_xxx]]
+Discipline: ""
+Statut: ""
+date_traite: ""
+tp_lie: ""
 Source_LaTeX: "${base}.tex"
 tags:
   - Cours
@@ -52,6 +53,8 @@ tags:
 - 📘 [[$pdf_complet|Version complète]]
 - 📓 [[$pdf_trous|Version à trous]]
 EOF
-
-  echo "✅ Note générée : $base.md"
+    echo "✅ Note créée : $base.md"
+  else
+    echo "⏭️  Note existante conservée : $base.md"
+  fi
 done
