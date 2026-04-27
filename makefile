@@ -27,14 +27,18 @@ $(BUILD_DIR)/%_complet.pdf: $(CHAPITRES_DIR)/%.tex Livre.tex
 	TEXINPUTS=.:$(PWD): $(PDFLATEX) -interaction=nonstopmode -jobname=$*_complet "\def\mode{complet} \def\fichier{$<} \input{Livre.tex}"
 	mkdir -p $(BUILD_DIR)
 	mv $*_complet.pdf $(BUILD_DIR)/
+	rm -f *.aux *.log *.out *.toc *.nav *.snm *.fls *.fdb_latexmk
 
 $(BUILD_DIR)/%_trous.pdf: $(CHAPITRES_DIR)/%.tex Livre.tex
 	TEXINPUTS=.:$(PWD): $(PDFLATEX) -interaction=nonstopmode -jobname=$*_trous "\def\mode{trous} \def\fichier{$<} \input{Livre.tex}"
 	mkdir -p $(BUILD_DIR)
 	mv $*_trous.pdf $(BUILD_DIR)/
+	rm -f *.aux *.log *.out *.toc *.nav *.snm *.fls *.fdb_latexmk
 
 # === Nettoyage ===
 clean:
 	rm -f *.aux *.log *.out *.toc *.nav *.snm *.fls *.fdb_latexmk
+
+distclean: clean
 	rm -rf $(BUILD_DIR)
 	
