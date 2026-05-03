@@ -1,7 +1,7 @@
 # Notice d'utilisation — Compilation et synchronisation Obsidian
 
 Ce projet contient les sources LaTeX des cours de Terminale spécialité physique-chimie.
-Le workflow repose sur deux outils : **`make`** pour compiler les PDF, et **`gen_chapitre_md.sh`** pour synchroniser avec le vault Obsidian.
+Le workflow repose sur trois outils : **`make`** pour compiler les PDF, **`gen_chapitre_md.sh`** pour synchroniser avec le vault Obsidian, et **`sync.sh`** pour tout enchaîner en une seule commande.
 
 ---
 
@@ -13,13 +13,47 @@ builds/             ← PDF générés (complet + trous)
 figures/            ← images incluses dans les cours
 Livre.tex           ← fichier maître LaTeX
 coursprof.cls       ← classe LaTeX personnalisée
-makefile            ← règles de compilation
+Makefile            ← règles de compilation
 gen_chapitre_md.sh  ← script de synchronisation Obsidian
+sync.sh             ← script tout-en-un (compilation + Obsidian + git)
 ```
 
 Chaque chapitre produit deux PDF :
 - `NOM_complet.pdf` — version professeur avec toutes les réponses
 - `NOM_trous.pdf` — version élève avec les espaces à compléter
+
+---
+
+## Workflow rapide avec `sync.sh`
+
+`sync.sh` est le script tout-en-un à utiliser au quotidien. Il enchaîne automatiquement la compilation, la synchronisation Obsidian et la sauvegarde sur GitHub.
+
+### Cas d'usage courant — après modification d'un ou plusieurs chapitres
+
+```bash
+bash sync.sh "Mise à jour chapitre 16 thermodynamique"
+```
+
+### Sans message personnalisé (message par défaut)
+
+```bash
+bash sync.sh
+```
+
+Le script effectue dans l'ordre :
+1. **`make all`** — recompile uniquement les chapitres modifiés
+2. **`gen_chapitre_md.sh`** — copie les PDF dans le vault Obsidian
+3. **`git add / commit / push`** — sauvegarde et publie sur GitHub
+
+Le script s'arrête immédiatement si une étape échoue (erreur LaTeX, problème réseau…). S'il n'y a rien à committer, il le signale et pousse quand même.
+
+### Recompilation globale (après changement de `coursprof.cls` ou `Livre.tex`)
+
+```bash
+make distclean
+make -B all
+bash sync.sh "Recompilation globale"
+```
 
 ---
 
@@ -143,6 +177,10 @@ git push
 ```
 
 ### Workflow complet : modifier, compiler, synchroniser, sauvegarder
+
+La manière la plus simple est d'utiliser `sync.sh` (voir section dédiée en haut).
+
+Pour un contrôle manuel étape par étape :
 
 ```bash
 # 1. Compiler après modification
