@@ -1,7 +1,7 @@
 # Notice d'utilisation — Compilation et synchronisation Obsidian
 
 Ce projet contient les sources LaTeX des cours de Terminale spécialité physique-chimie.
-Le workflow repose sur trois outils : **`make`** pour compiler les PDF, **`gen_chapitre_md.sh`** pour synchroniser avec le vault Obsidian, et **`sync.sh`** pour tout enchaîner en une seule commande.
+Le workflow repose sur trois outils : **`make`** pour compiler les PDF, **`gen_chapitre_md.sh`** pour synchroniser avec le vault Obsidian, et **`cours-sync`** pour tout enchaîner en une seule commande.
 
 ---
 
@@ -15,7 +15,7 @@ Livre.tex           ← fichier maître LaTeX
 coursprof.cls       ← classe LaTeX personnalisée
 Makefile            ← règles de compilation
 gen_chapitre_md.sh  ← script de synchronisation Obsidian
-sync.sh             ← script tout-en-un (compilation + Obsidian + git)
+cours-sync          ← script tout-en-un (compilation + Obsidian + git)
 ```
 
 Chaque chapitre produit deux PDF :
@@ -24,20 +24,20 @@ Chaque chapitre produit deux PDF :
 
 ---
 
-## Workflow rapide avec `sync.sh`
+## Workflow rapide avec `cours-sync`
 
-`sync.sh` est le script tout-en-un à utiliser au quotidien. Il enchaîne automatiquement la compilation, la synchronisation Obsidian et la sauvegarde sur GitHub.
+`cours-sync` est le script tout-en-un à utiliser au quotidien. Il enchaîne automatiquement la compilation, la synchronisation Obsidian et la sauvegarde sur GitHub.
 
 ### Cas d'usage courant — après modification d'un ou plusieurs chapitres
 
 ```bash
-bash sync.sh "Mise à jour chapitre 16 thermodynamique"
+bash cours-sync "Mise à jour chapitre 16 thermodynamique"
 ```
 
 ### Sans message personnalisé (message par défaut)
 
 ```bash
-bash sync.sh
+bash cours-sync
 ```
 
 Le script effectue dans l'ordre :
@@ -52,7 +52,7 @@ Le script s'arrête immédiatement si une étape échoue (erreur LaTeX, problèm
 ```bash
 make distclean
 make -B all
-bash sync.sh "Recompilation globale"
+bash cours-sync "Recompilation globale"
 ```
 
 ---
@@ -178,7 +178,7 @@ git push
 
 ### Workflow complet : modifier, compiler, synchroniser, sauvegarder
 
-La manière la plus simple est d'utiliser `sync.sh` (voir section dédiée en haut).
+La manière la plus simple est d'utiliser `cours-sync` (voir section dédiée en haut).
 
 Pour un contrôle manuel étape par étape :
 
